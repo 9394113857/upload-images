@@ -1,0 +1,9 @@
+In the code above, we define the app object and configure the UPLOAD_FOLDER where uploaded files will be saved. We also define a set of allowed extensions in ALLOWED_EXTENSIONS, and a helper function allowed_file to check if a file has an allowed extension.
+
+In the index function, we render the index.html template that contains a form with a file input field that allows users to upload multiple image files.
+
+In the upload function, we get the uploaded files from the request object using the getlist method, and loop through them. For each file, we check if it has an allowed extension using the allowed_file function. If it does, we save the file to the UPLOAD_FOLDER and add the path to the uploaded image to the image_paths list.
+
+Finally, we render the uploaded.html template and pass the image_paths list as a parameter. This template loops through the image_paths list and displays each uploaded image using an img tag.
+
+Note: This example code is for demonstration purposes only and should not be used in a production environment without proper security and error handling measures.
